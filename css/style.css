@@ -1,20 +1,41 @@
-.carousel-inner .carousel-item img {
+/* .carousel-inner .carousel-item img {
     width: 400px;
     height: 800px;
-  }
+  } */
 
-body {
+/* body {
     padding: 25px;
     background-color: black;
     color: white;
     font-size: 25px;
-  }
+  } */
   
-.display-1, .display-4  { 
+/* .display-1, .display-4  { 
     text-align: center; 
-} 
+}  */
 
-.swiper {
-    width: 600px;
-    height: 300px;
-  }
+.grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  width: 80%;
+  max-width: 600px;
+  margin: 0 auto;
+  border: 5px solid var(--clr-primary);
+  position: relative; /* Establish positioning context */
+}
+
+.image, .grid-content {
+  grid-row: 1 / 2;
+  align-self: center;
+  position: absolute;
+  top: 0;
+}
+
+.grid-content {
+  background: white;
+  padding: 0.45em;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
+  z-index: 1; /* Ensures text appears on top of image */
+  opacity: 0.8; /* Optional: makes the overlay slightly transparent */
+    transform: translateX(50%); /* Centers the <p> relative to its new position */
+}
